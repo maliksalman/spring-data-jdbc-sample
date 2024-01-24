@@ -4,7 +4,7 @@ databaseChangeLog:
       author: salman.malik
       changes:
         - createTable:
-            tableName: heroes
+            tableName: hero
             remarks: A table that contains information about super-heroes
             columns:
               - column:
@@ -33,5 +33,5 @@ databaseChangeLog:
               - column:
                   name: name
             indexName: unique_name
-            tableName: heroes
+            tableName: hero
             unique: true
