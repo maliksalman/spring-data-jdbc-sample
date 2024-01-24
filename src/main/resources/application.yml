@@ -1,0 +1,13 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.data: INFO
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+
+springdoc:
+  swagger-ui:
+    path: /
