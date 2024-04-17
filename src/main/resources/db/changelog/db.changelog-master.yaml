@@ -35,3 +35,38 @@ databaseChangeLog:
             indexName: unique_name
             tableName: hero
             unique: true
+  - changeSet:
+      id: change-00003
+      author: salman.malik
+      changes:
+        - createTable:
+            tableName: sale
+            remarks: A table to demo more advanced features
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: version
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: day_of_week
+                  type: CHAR(3)
+                  constraints:
+                    nullable: false

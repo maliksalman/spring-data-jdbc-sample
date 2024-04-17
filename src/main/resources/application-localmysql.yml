@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:13306/testdb
-    username: root
-    password: my-secret-pw
+    username: myuser
+    password: secret
   h2:
     console:
       enabled: false

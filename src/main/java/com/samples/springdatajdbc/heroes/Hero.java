@@ -1,4 +1,4 @@
-package com.samples.springdatajpa;
+package com.samples.springdatajdbc.heroes;
 
 import lombok.Builder;
 import org.springframework.data.annotation.Id;

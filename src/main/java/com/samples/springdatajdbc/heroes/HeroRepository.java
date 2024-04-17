@@ -1,4 +1,4 @@
-package com.samples.springdatajpa;
+package com.samples.springdatajdbc.heroes;
 
 import org.springframework.data.repository.CrudRepository;
 

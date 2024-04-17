@@ -1,4 +1,4 @@
-package com.samples.springdatajpa;
+package com.samples.springdatajdbc.heroes;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;

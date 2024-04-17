@@ -34,9 +34,10 @@ For the above to work, start a MySQL instance in docker like so:
 ```
 docker run --name mysql \
     -e MYSQL_DATABASE=testdb \
-    -e MYSQL_ROOT_PASSWORD=my-secret-pw \
-    -d -p 13306:3306 mysql:8 \
-    --default-authentication-plugin=mysql_native_password
+    -e MYSQL_PASSWORD=secret \
+    -e MYSQL_ROOT_PASSWORD=verysecret \
+    -e MYSQL_USER=myuser \
+    -d -p 13306:3306 mysql:8
 ```
 
 We can replace `mysql:8` with `mysql:5.7` as the docker image name to target a specific MySQL version. Running MySQL 5.7 on M1 mac requires an extra `platform` parameter since that version of docker image is only available for `amd64` platform:
@@ -45,9 +46,10 @@ We can replace `mysql:8` with `mysql:5.7` as the docker image name to target a s
 docker run --name mysql \
     --platform linux/amd64 \
     -e MYSQL_DATABASE=testdb \
-    -e MYSQL_ROOT_PASSWORD=my-secret-pw \
-    -d -p 13306:3306 mysql:5.7 \
-    --default-authentication-plugin=mysql_native_password
+    -e MYSQL_PASSWORD=secret \
+    -e MYSQL_ROOT_PASSWORD=verysecret \
+    -e MYSQL_USER=myuser \
+    -d -p 13306:3306 mysql:5.7
 ```
 
 If connecting to a different MySQL database, the DB connection properties defined in  [src/main/resources/application-localmysql.yml](src/main/resources/application-localmysql.yml) might have to be adjusted.
@@ -65,7 +67,7 @@ For the above to work, start a PostgresSQL instance in docker like so:
 
 ```
 docker run --name postgres \
-    -e POSTGRES_PASSWORD=my-secret-pw \
+    -e POSTGRES_PASSWORD=secret \
     -d -p 15432:5432 postgres:15
 ```
 
