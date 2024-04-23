@@ -98,12 +98,12 @@ databaseChangeLog:
               - column:
                   name: created
                   type: TIMESTAMP
-#                  constraints:   # MySQL balks this and wants a default value if you make this type of column not-nullable
+#                  constraints:   # MySQL balks at this and wants a default value if you make this type of column not-nullable
 #                    nullable: false
               - column:
                   name: updated
                   type: TIMESTAMP
-#                  constraints:   # MySQL balks this and wants a default value if you make this type of column not-nullable
+#                  constraints:   # MySQL balks at this and wants a default value if you make this type of column not-nullable
 #                    nullable: false
         - createTable:
             tableName: order_items
@@ -140,7 +140,7 @@ databaseChangeLog:
               - column:
                   name: created
                   type: TIMESTAMP
-#                  constraints:   # MySQL balks this and wants a default value if you make this type of column not-nullable
+#                  constraints:   # MySQL balks at this and wants a default value if you make this type of column not-nullable
 #                    nullable: false
         - addPrimaryKey:
             columnNames: order_id,item_id
