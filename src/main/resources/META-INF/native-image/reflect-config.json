@@ -1,0 +1,790 @@
+[
+  {
+    "name":"liquibase.AbstractExtensibleObject",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.AbstractExtensibleObjectBeanInfo"
+  },
+  {
+    "name":"liquibase.AbstractExtensibleObjectCustomizer"
+  },
+  {
+    "name":"liquibase.ExtensibleObject",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.AbstractChange",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.AbstractChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.AbstractChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.AbstractSQLChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"isIgnoreOriginalSplitStatements","parameterTypes":[] }, {"name":"isSplitStatements","parameterTypes":[] }, {"name":"isStripComments","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.AbstractSQLChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.AbstractSQLChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.AbstractTableChange",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.AbstractTableChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.AbstractTableChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.AddColumnConfig",
+    "allDeclaredFields":true,
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.Change",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.ChangeFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.change.ChangeWithColumns",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.ColumnConfig",
+    "allDeclaredFields":true,
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.ConstraintsConfig",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"liquibase.change.DbmsTargetedChange",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.ReplaceIfExists",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.core.AbstractModifyDataChange",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.change.core.AbstractModifyDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AbstractModifyDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddAutoIncrementChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddAutoIncrementChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddAutoIncrementChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddColumnChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddColumnChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddColumnChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddDefaultValueChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddDefaultValueChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddDefaultValueChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddForeignKeyConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddForeignKeyConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddForeignKeyConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddLookupTableChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddLookupTableChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddLookupTableChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddNotNullConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddNotNullConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddNotNullConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddPrimaryKeyChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getCatalogName","parameterTypes":[] }, {"name":"getClustered","parameterTypes":[] }, {"name":"getColumnNames","parameterTypes":[] }, {"name":"getConstraintName","parameterTypes":[] }, {"name":"getForIndexCatalogName","parameterTypes":[] }, {"name":"getForIndexName","parameterTypes":[] }, {"name":"getForIndexSchemaName","parameterTypes":[] }, {"name":"getSchemaName","parameterTypes":[] }, {"name":"getTableName","parameterTypes":[] }, {"name":"getTablespace","parameterTypes":[] }, {"name":"getValidate","parameterTypes":[] }, {"name":"setCatalogName","parameterTypes":["java.lang.String"] }, {"name":"setClustered","parameterTypes":["java.lang.Boolean"] }, {"name":"setColumnNames","parameterTypes":["java.lang.String"] }, {"name":"setConstraintName","parameterTypes":["java.lang.String"] }, {"name":"setForIndexCatalogName","parameterTypes":["java.lang.String"] }, {"name":"setForIndexName","parameterTypes":["java.lang.String"] }, {"name":"setForIndexSchemaName","parameterTypes":["java.lang.String"] }, {"name":"setSchemaName","parameterTypes":["java.lang.String"] }, {"name":"setTableName","parameterTypes":["java.lang.String"] }, {"name":"setTablespace","parameterTypes":["java.lang.String"] }, {"name":"setValidate","parameterTypes":["java.lang.Boolean"] }]
+  },
+  {
+    "name":"liquibase.change.core.AddPrimaryKeyChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddPrimaryKeyChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AddUniqueConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AddUniqueConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AddUniqueConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.AlterSequenceChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isOrdered","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.AlterSequenceChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.AlterSequenceChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.CreateIndexChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getAssociatedWith","parameterTypes":[] }, {"name":"getCatalogName","parameterTypes":[] }, {"name":"getClustered","parameterTypes":[] }, {"name":"getColumns","parameterTypes":[] }, {"name":"getIndexName","parameterTypes":[] }, {"name":"getSchemaName","parameterTypes":[] }, {"name":"getTableName","parameterTypes":[] }, {"name":"getTablespace","parameterTypes":[] }, {"name":"isUnique","parameterTypes":[] }, {"name":"setAssociatedWith","parameterTypes":["java.lang.String"] }, {"name":"setCatalogName","parameterTypes":["java.lang.String"] }, {"name":"setClustered","parameterTypes":["java.lang.Boolean"] }, {"name":"setIndexName","parameterTypes":["java.lang.String"] }, {"name":"setSchemaName","parameterTypes":["java.lang.String"] }, {"name":"setTableName","parameterTypes":["java.lang.String"] }, {"name":"setTablespace","parameterTypes":["java.lang.String"] }, {"name":"setUnique","parameterTypes":["java.lang.Boolean"] }]
+  },
+  {
+    "name":"liquibase.change.core.CreateIndexChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.CreateIndexChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.CreateProcedureChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isRelativeToChangelogFile","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.CreateProcedureChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.CreateProcedureChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.CreateSequenceChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isOrdered","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.CreateSequenceChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.CreateSequenceChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.CreateTableChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getCatalogName","parameterTypes":[] }, {"name":"getColumns","parameterTypes":[] }, {"name":"getIfNotExists","parameterTypes":[] }, {"name":"getRemarks","parameterTypes":[] }, {"name":"getRowDependencies","parameterTypes":[] }, {"name":"getSchemaName","parameterTypes":[] }, {"name":"getTableName","parameterTypes":[] }, {"name":"getTableType","parameterTypes":[] }, {"name":"getTablespace","parameterTypes":[] }, {"name":"setCatalogName","parameterTypes":["java.lang.String"] }, {"name":"setIfNotExists","parameterTypes":["java.lang.Boolean"] }, {"name":"setRemarks","parameterTypes":["java.lang.String"] }, {"name":"setRowDependencies","parameterTypes":["java.lang.Boolean"] }, {"name":"setSchemaName","parameterTypes":["java.lang.String"] }, {"name":"setTableName","parameterTypes":["java.lang.String"] }, {"name":"setTableType","parameterTypes":["java.lang.String"] }, {"name":"setTablespace","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"liquibase.change.core.CreateTableChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.CreateTableChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.CreateViewChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.CreateViewChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.CreateViewChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DeleteDataChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DeleteDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DeleteDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropAllForeignKeyConstraintsChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropAllForeignKeyConstraintsChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropAllForeignKeyConstraintsChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropColumnChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropColumnChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropColumnChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropDefaultValueChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropDefaultValueChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropDefaultValueChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropForeignKeyConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropForeignKeyConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropForeignKeyConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropIndexChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropIndexChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropIndexChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropNotNullConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropNotNullConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropNotNullConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropPrimaryKeyChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropPrimaryKeyChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropPrimaryKeyChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropProcedureChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropProcedureChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropProcedureChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropSequenceChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropSequenceChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropSequenceChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropTableChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isCascadeConstraints","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropTableChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropTableChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropUniqueConstraintChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropUniqueConstraintChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropUniqueConstraintChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.DropViewChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isIfExists","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.DropViewChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.DropViewChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.EmptyChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.EmptyChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.EmptyChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.ExecuteShellCommandChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.ExecuteShellCommandChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.ExecuteShellCommandChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.InsertDataChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.InsertDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.InsertDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.LoadDataChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isRelativeToChangelogFile","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.LoadDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.LoadDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.LoadUpdateDataChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.LoadUpdateDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.LoadUpdateDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.MergeColumnChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.MergeColumnChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.MergeColumnChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.ModifyDataTypeChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.ModifyDataTypeChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.ModifyDataTypeChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.OutputChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.OutputChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.OutputChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.RawSQLChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isOriginalSplitStatements","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.RawSQLChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.RawSQLChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.RenameColumnChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.RenameColumnChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.RenameColumnChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.RenameSequenceChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.RenameSequenceChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.RenameSequenceChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.RenameTableChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.RenameTableChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.RenameTableChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.RenameViewChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.RenameViewChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.RenameViewChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.SQLFileChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"isDoExpandExpressionsInGenerateChecksum","parameterTypes":[] }, {"name":"isOriginalSplitStatements","parameterTypes":[] }, {"name":"isRelativeToChangelogFile","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.SQLFileChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.SQLFileChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.SetColumnRemarksChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.SetColumnRemarksChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.SetColumnRemarksChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.SetTableRemarksChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.SetTableRemarksChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.SetTableRemarksChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.StopChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.StopChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.StopChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.TagDatabaseChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.TagDatabaseChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.TagDatabaseChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.core.UpdateDataChange",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.core.UpdateDataChangeBeanInfo"
+  },
+  {
+    "name":"liquibase.change.core.UpdateDataChangeCustomizer"
+  },
+  {
+    "name":"liquibase.change.custom.CustomChangeWrapper",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.change.custom.CustomChangeWrapperBeanInfo"
+  },
+  {
+    "name":"liquibase.change.custom.CustomChangeWrapperCustomizer"
+  },
+  {
+    "name":"liquibase.changelog.ChangeLogHistoryServiceFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.changelog.FastCheckService",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.changelog.StandardChangeLogHistoryService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.changelog.visitor.ValidatingVisitorGeneratorFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.command.CommandFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.command.core.UpdateCommandStep",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.command.core.helpers.ChangeExecListenerCommandStep",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.command.core.helpers.DatabaseChangelogCommandStep",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.command.core.helpers.DbUrlConnectionArgumentsCommandStep",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.command.core.helpers.DbUrlConnectionCommandStep",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.command.core.helpers.ShowSummaryArgument",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.configuration.ConfiguredValueModifierFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.configuration.LiquibaseConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.database.LiquibaseTableNamesFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.database.core.H2Database",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.database.jvm.JdbcConnection",
+    "methods":[{"name":"getWrappedConnection","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.BinaryTypeSnowflake",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.BlobType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.BooleanType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.CharType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.ClobType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.ClobTypeSnowflake",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.DateTimeType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.DateType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.DoubleDataTypeSnowflake",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.DoubleType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.IntType",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setAutoIncrement","parameterTypes":["boolean"] }]
+  },
+  {
+    "name":"liquibase.datatype.core.TextDataTypeSnowflake",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.TimestampNTZTypeSnowflake",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.TimestampType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.UUIDType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.datatype.core.VarcharType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.executor.ExecutorService",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.executor.jvm.JdbcExecutor",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.integration.spring.SpringLiquibase",
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"afterPropertiesSet","parameterTypes":[] }, {"name":"setBeanName","parameterTypes":["java.lang.String"] }, {"name":"setResourceLoader","parameterTypes":["org.springframework.core.io.ResourceLoader"] }]
+  },
+  {
+    "name":"liquibase.lockservice.StandardLockService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"liquibase.logging.core.LogServiceFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.logging.mdc.MdcManagerFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.plugin.AbstractPlugin",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.plugin.AbstractPluginBeanInfo"
+  },
+  {
+    "name":"liquibase.plugin.AbstractPluginCustomizer"
+  },
+  {
+    "name":"liquibase.plugin.Plugin",
+    "queryAllPublicMethods":true
+  },
+  {
+    "name":"liquibase.report.ShowSummaryGeneratorFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["liquibase.Scope"] }]
+  },
+  {
+    "name":"liquibase.serializer.AbstractLiquibaseSerializable",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"liquibase.ui.LoggerUIService",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

@@ -1,14 +1,17 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.4'
-	id 'io.spring.dependency-management' version '1.1.4'
+	id 'org.springframework.boot' version '3.4.3'
+	id 'io.spring.dependency-management' version '1.1.7'
+	id 'org.graalvm.buildtools.native' version '0.10.5'
 }
 
 group = 'com.samples'
 version = '1.0'
 
 java {
-	sourceCompatibility = '21'
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
 }
 
 repositories {
@@ -24,18 +27,21 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 
 	// needed to bind to services when deployed in TAS/CloudFoundry
-	implementation 'io.pivotal.cfenv:java-cfenv-boot:3.1.5'
+	implementation 'io.pivotal.cfenv:java-cfenv-boot:3.3.0'
 
 	// automatically exposes OpenAPI swagger documentation for APIs
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.5'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	// needed to maintain DB schema changes as code
 	implementation 'org.liquibase:liquibase-core'
 
-	// JDBC drivers, usually only one is needed, 3 here for demo purposes
-	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'com.mysql:mysql-connector-j'
-	runtimeOnly 'org.postgresql:postgresql'
+	// 1. JDBC drivers, usually only one is needed, 3 here for demo purposes
+	// 2. To force boot to pickup all these drivers during nativeCompile, they
+	//    are marked as `implementation` instead of `runtimeOnly`
+	implementation 'com.h2database:h2'
+	implementation 'com.mysql:mysql-connector-j'
+	implementation 'org.postgresql:postgresql'
 
 	// project-lombok to remove boiler-plate java code
 	compileOnly 'org.projectlombok:lombok'

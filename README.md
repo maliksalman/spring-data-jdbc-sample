@@ -52,7 +52,7 @@ docker run --name mysql \
     -d -p 13306:3306 mysql:5.7
 ```
 
-If connecting to a different MySQL database, the DB connection properties defined in  [src/main/resources/application-localmysql.yml](src/main/resources/application-localmysql.yml) might have to be adjusted.
+If connecting to a different MySQL database, the DB connection properties defined in  [src/main/resources/application-localmysql.yml](src/main/resources/application-localmysql.yml) will have to be adjusted.
 
 ### Run with PostgresSQL database
 
@@ -71,4 +71,28 @@ docker run --name postgres \
     -d -p 15432:5432 postgres:15
 ```
 
-If connecting to a different PostgresSQL database, the DB connection properties defined in [src/main/resources/application-localpg.yml](src/main/resources/application-localpg.yml) might have to be adjusted.
+If connecting to a different PostgresSQL database, the DB connection properties defined in [src/main/resources/application-localpg.yml](src/main/resources/application-localpg.yml) will have to be adjusted.
+
+## Misc
+
+Creating a spring-boot OCI image (with a specific image name):
+
+Running this as is will create an OCI image with a native-image binary inside the image. If you want a regular image with the JRE included, comment out the `org.graalvm.buildtools.native` plugin from the `build.gradle`
+
+```
+./gradlew clean bootBuildImage --imageName=maliksalman/spring-data-jdbc-sample:1.0
+```
+
+Running the docker container:
+
+```
+docker run --rm -p 8080:8080 maliksalman/spring-data-jdbc-sample:1.0
+```
+
+Compiling into native binary with GraalVM or NIK:
+
+```
+./gradlew clean nativeCompile
+```
+
+This will create a binary at `build/native/nativeCompile/spring-data-jdbc-sample`

@@ -30,9 +30,4 @@ public class Sale {
     public Sale add(int amount) {
         return new Sale(id, version, total+amount, date, dayOfWeek);
     }
-
-    public interface Partial {
-        LocalDate getDate();
-        int getTotal();
-    }
 }

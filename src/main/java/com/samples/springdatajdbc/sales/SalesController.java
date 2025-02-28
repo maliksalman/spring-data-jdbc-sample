@@ -45,7 +45,7 @@ public class SalesController {
     }
 
     @GetMapping("/partial/{date}")
-    public Sale.Partial partialSale(@PathVariable("date") LocalDate date) {
+    public SaleTotal partialSale(@PathVariable("date") LocalDate date) {
         return repo.findFirstSaleByDate(date);
     }
 }

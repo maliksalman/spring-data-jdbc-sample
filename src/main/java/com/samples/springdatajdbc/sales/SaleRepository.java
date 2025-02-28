@@ -29,5 +29,5 @@ public interface SaleRepository extends CrudRepository<Sale, Long> {
      * bean with set/get methods and no-args constructor - records not
      * supported.
      */
-    Sale.Partial findFirstSaleByDate(LocalDate date);
+    SaleTotal findFirstSaleByDate(LocalDate date);
 }
