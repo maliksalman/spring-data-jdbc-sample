@@ -4,7 +4,7 @@ A sample spring-boot application that shows off `spring-data-jdbc` capabilities.
 
 ## Building
 
-JDK 21+ is required to build/run: 
+JDK 17 or 21 is required to build/run (in the `build.gradle` 21 is set up by default): 
 
 ```
 ./gradlew clean build

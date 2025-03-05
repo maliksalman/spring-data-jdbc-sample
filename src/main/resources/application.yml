@@ -3,6 +3,8 @@ spring:
     console:
       enabled: true
 
+hostname: placeholder
+
 logging:
   level:
     org.springframework.data: INFO

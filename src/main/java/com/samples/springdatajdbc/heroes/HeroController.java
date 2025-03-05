@@ -1,17 +1,24 @@
 package com.samples.springdatajdbc.heroes;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/heroes")
 public class HeroController {
 
     private final HeroRepository repo;
+    private final String hostname;
+
+    public HeroController(HeroRepository repo, @Value("${hostname}") String hostname) {
+        this.repo = repo;
+        this.hostname = hostname;
+    }
 
     /**
      * Creates a new hero, example:
@@ -22,11 +29,12 @@ public class HeroController {
      * </code>
      */
     @PostMapping("/{name}/{age}")
-    public Hero create(@PathVariable("name") String name, @PathVariable("age") int age) {
-        return repo.save(Hero.builder()
+    public HeroResult create(@PathVariable("name") String name, @PathVariable("age") int age) {
+        Hero saved = repo.save(Hero.builder()
                 .name(name)
                 .age(age)
                 .build());
+        return new HeroResult(saved, hostname, LocalDateTime.now());
     }
 
     /**
@@ -36,8 +44,11 @@ public class HeroController {
      * </code>
      */
     @GetMapping
-    public Iterable<Hero> all() {
-        return repo.findAll();
+    public HeroListResult all() {
+        List<Hero> heroes = new ArrayList<>();
+        repo.findAll()
+                .forEach(hero -> heroes.add(hero));
+        return new HeroListResult(heroes, hostname, LocalDateTime.now());
     }
 
     /**
@@ -47,8 +58,9 @@ public class HeroController {
      * </code>
      */
     @GetMapping("/lt/{age}")
-    public List<Hero> lessThan(@PathVariable("age") int age) {
-        return repo.findByAgeLessThan(age);
+    public HeroListResult lessThan(@PathVariable("age") int age) {
+        List<Hero> heroes = repo.findByAgeLessThan(age);
+        return new HeroListResult(heroes, hostname, LocalDateTime.now());
     }
 
     /**
@@ -58,8 +70,9 @@ public class HeroController {
      * </code>
      */
     @GetMapping("/gt/{age}")
-    public List<Hero> greaterThan(@PathVariable("age") int age) {
-        return repo.findByAgeGreaterThan(age);
+    public HeroListResult greaterThan(@PathVariable("age") int age) {
+        List<Hero> heroes = repo.findByAgeGreaterThan(age);
+        return new HeroListResult(heroes, hostname, LocalDateTime.now());
     }
 
     /**
@@ -70,7 +83,8 @@ public class HeroController {
      */
     @GetMapping("/{name}")
     @Cacheable
-    public List<Hero> name(@PathVariable("name") String name) {
-        return repo.findByName(name);
+    public HeroListResult name(@PathVariable("name") String name) {
+        List<Hero> found = repo.findByName(name);
+        return new HeroListResult(found, hostname, LocalDateTime.now());
     }
 }
