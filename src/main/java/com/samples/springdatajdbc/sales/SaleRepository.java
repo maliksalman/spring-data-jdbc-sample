@@ -19,9 +19,9 @@ public interface SaleRepository extends CrudRepository<Sale, Long> {
     int getSalesForDayOfWeek(@Param("dayOfWeek") String dayOfWeek);
 
     /**
-     * Example of well named method that spring-data-jdbc will implement
+     * Example of well-named method that spring-data-jdbc will implement
      */
-    List<Sale> findSalesByDayOfWeekOrderByDate(String dayOfWeek);
+    List<Sale> findSalesByDayOfWeekOrderBySaleDate(String dayOfWeek);
 
     /**
      * Example of a projection. The projection is an interface matching
@@ -29,5 +29,5 @@ public interface SaleRepository extends CrudRepository<Sale, Long> {
      * bean with set/get methods and no-args constructor - records not
      * supported.
      */
-    SaleTotal findFirstSaleByDate(LocalDate date);
+    SaleTotal findFirstSaleBySaleDate(LocalDate date);
 }

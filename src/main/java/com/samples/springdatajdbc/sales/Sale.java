@@ -24,10 +24,10 @@ public class Sale {
     @Id Long id;
     @Version int version;
     int total;
-    LocalDate date;
+    LocalDate saleDate;
     String dayOfWeek;
 
     public Sale add(int amount) {
-        return new Sale(id, version, total+amount, date, dayOfWeek);
+        return new Sale(id, version, total+amount, saleDate, dayOfWeek);
     }
 }

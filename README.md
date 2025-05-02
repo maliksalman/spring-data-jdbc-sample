@@ -37,7 +37,8 @@ docker run --name mysql \
     -e MYSQL_PASSWORD=secret \
     -e MYSQL_ROOT_PASSWORD=verysecret \
     -e MYSQL_USER=myuser \
-    -d -p 13306:3306 mysql:8
+    -d -p 13306:3306 \
+    mysql:8
 ```
 
 We can replace `mysql:8` with `mysql:5.7` as the docker image name to target a specific MySQL version. Running MySQL 5.7 on M1 mac requires an extra `platform` parameter since that version of docker image is only available for `amd64` platform:
@@ -49,7 +50,8 @@ docker run --name mysql \
     -e MYSQL_PASSWORD=secret \
     -e MYSQL_ROOT_PASSWORD=verysecret \
     -e MYSQL_USER=myuser \
-    -d -p 13306:3306 mysql:5.7
+    -d -p 13306:3306 \
+    mysql:5.7
 ```
 
 If connecting to a different MySQL database, the DB connection properties defined in  [src/main/resources/application-localmysql.yml](src/main/resources/application-localmysql.yml) will have to be adjusted.
@@ -68,10 +70,32 @@ For the above to work, start a PostgresSQL instance in docker like so:
 ```
 docker run --name postgres \
     -e POSTGRES_PASSWORD=secret \
-    -d -p 15432:5432 postgres:15
+    -d -p 15432:5432 \
+    postgres:15
 ```
 
 If connecting to a different PostgresSQL database, the DB connection properties defined in [src/main/resources/application-localpg.yml](src/main/resources/application-localpg.yml) will have to be adjusted.
+
+### Run with an Oracle database
+
+To use an Oracle DB, run with `oracle` spring profile
+
+```
+SPRING_PROFILES_ACTIVE=oracle java -jar \
+    build/libs/spring-data-jdbc-sample-1.0.jar
+```
+
+For the above to work, start an OracleXE instance in docker like so:
+
+```
+docker run --name oracle-db \
+    -d -p 1521:1521 \
+    -e ORACLE_PWD=super-secret-101 \
+    container-registry.oracle.com/database/express:21.3.0-xe
+```
+
+If connecting to a different Oracle database, the DB connection properties defined in [src/main/resources/application-oracle.yml](src/main/resources/application-oracle.yml) will have to be adjusted.
+
 
 ## Misc
 

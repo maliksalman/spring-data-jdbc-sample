@@ -24,7 +24,7 @@ public class SalesController {
     public Sale add(@PathVariable("date") LocalDate date, @PathVariable("amount") int amount) {
         return repo.save(Sale.builder()
                         .total(amount)
-                        .date(date)
+                        .saleDate(date)
                         .dayOfWeek(date.getDayOfWeek().name().toUpperCase().substring(0, 3))
                 .build());
     }
@@ -36,7 +36,7 @@ public class SalesController {
 
     @GetMapping("/mondays")
     public List<Sale> mondaysList() {
-        return repo.findSalesByDayOfWeekOrderByDate("MON");
+        return repo.findSalesByDayOfWeekOrderBySaleDate("MON");
     }
 
     @GetMapping("/mondays/sum")
@@ -46,6 +46,6 @@ public class SalesController {
 
     @GetMapping("/partial/{date}")
     public SaleTotal partialSale(@PathVariable("date") LocalDate date) {
-        return repo.findFirstSaleByDate(date);
+        return repo.findFirstSaleBySaleDate(date);
     }
 }

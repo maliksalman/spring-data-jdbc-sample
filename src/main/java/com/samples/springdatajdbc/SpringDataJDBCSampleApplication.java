@@ -45,15 +45,15 @@ public class SpringDataJDBCSampleApplication {
             saleRepository.deleteAll();
             saleRepository.saveAll(List.of(
                     Sale.builder()
-                            .date(LocalDate.of(2024, 4, 1))
+                            .saleDate(LocalDate.of(2024, 4, 1))
                             .dayOfWeek("MON").total(100)
                             .build(),
                     Sale.builder()
-                            .date(LocalDate.of(2024, 4, 2))
+                            .saleDate(LocalDate.of(2024, 4, 2))
                             .dayOfWeek("TUE").total(200)
                             .build(),
                     Sale.builder()
-                            .date(LocalDate.of(2024, 4, 3))
+                            .saleDate(LocalDate.of(2024, 4, 3))
                             .dayOfWeek("WED").total(300)
                             .build()
             ));

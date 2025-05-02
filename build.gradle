@@ -1,8 +1,8 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.4.3'
+	id 'org.springframework.boot' version '3.4.5'
 	id 'io.spring.dependency-management' version '1.1.7'
-	id 'org.graalvm.buildtools.native' version '0.10.5'
+	id 'org.graalvm.buildtools.native' version '0.10.6'
 }
 
 group = 'com.samples'
@@ -30,7 +30,7 @@ dependencies {
 	implementation 'io.pivotal.cfenv:java-cfenv-boot:3.3.0'
 
 	// automatically exposes OpenAPI swagger documentation for APIs
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.5'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	// needed to maintain DB schema changes as code
@@ -42,6 +42,7 @@ dependencies {
 	implementation 'com.h2database:h2'
 	implementation 'com.mysql:mysql-connector-j'
 	implementation 'org.postgresql:postgresql'
+	implementation 'com.oracle.database.jdbc:ojdbc11'
 
 	// project-lombok to remove boiler-plate java code
 	compileOnly 'org.projectlombok:lombok'
