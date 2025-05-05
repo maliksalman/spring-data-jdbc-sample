@@ -67,8 +67,9 @@ databaseChangeLog:
                   constraints:
                     nullable: false
   - changeSet:
-      id: change-00003
+      id: change-00003-all
       author: salman.malik
+      dbms: "!oracle"
       changes:
         - createTable:
             tableName: orders
@@ -142,6 +143,81 @@ databaseChangeLog:
                   type: TIMESTAMP
 #                  constraints:   # MySQL balks at this and wants a default value if you make this type of column not-nullable
 #                    nullable: false
+        - addPrimaryKey:
+            columnNames: order_id,item_id
+            constraintName: pk_order_item
+            tableName: order_items
+  - changeSet:
+      id: change-00003-oracle
+      author: salman.malik
+      dbms: "oracle"
+      changes:
+        - createTable:
+            tableName: orders
+            remarks: A table to demo dealing with orders with JdbcClient
+            columns:
+              - column:
+                  name: order_id
+                  type: CHAR(36)
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: customer_id
+                  type: CHAR(36)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_amount
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: tax
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: TIMESTAMP
+              - column:
+                  name: updated
+                  type: TIMESTAMP
+        - createTable:
+            tableName: order_items
+            remarks: A table to demo dealing with order-items with JdbcClient
+            columns:
+              - column:
+                  name: order_id
+                  type: CHAR(36)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_order
+                    referencedColumnNames: order_id
+                    referencedTableName: orders
+              - column:
+                  name: item_id
+                  type: CHAR(36)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: CHAR(36)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: TIMESTAMP
         - addPrimaryKey:
             columnNames: order_id,item_id
             constraintName: pk_order_item
