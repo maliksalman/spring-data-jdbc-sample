@@ -63,7 +63,7 @@ public class OrderRepository {
         client.sql("insert into order_items(order_id, item_id, product_id, quantity, price, created) values (?, ?, ?, ?, ?, ?)")
                 .params(item.orderId().toString(),
                         itemId.toString(),
-                        item.productId(),
+                        item.productId().toString(),
                         item.quantity(),
                         item.price(),
                         timestamp)
