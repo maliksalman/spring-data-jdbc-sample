@@ -23,8 +23,11 @@ dependencies {
 	// starter for spring MVC web application
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
-	// starters for spring-data-jdbc
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	// starters for spring-data-jdbc (with apache-dbcp2 connection pooling)
+	implementation 'org.apache.commons:commons-dbcp2'
+	implementation('org.springframework.boot:spring-boot-starter-data-jdbc') {
+		exclude group: 'com.zaxxer', module: 'HikariCP'
+	}
 
 	// needed to bind to services when deployed in TAS/CloudFoundry
 	implementation 'io.pivotal.cfenv:java-cfenv-boot:3.3.0'
