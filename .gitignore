@@ -29,3 +29,7 @@ out/
 ### VS Code ###
 .vscode/
 bin/
+
+### gradle ###
+.gradle/
+build/

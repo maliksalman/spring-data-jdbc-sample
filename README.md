@@ -4,10 +4,10 @@ A sample spring-boot application that shows off `spring-data-jdbc` capabilities.
 
 ## Building
 
-JDK 17 or 21 is required to build/run (in the `build.gradle` 21 is set up by default): 
+JDK 17 or 21 is required to build/run (in the `pom.xml`, 21 is set up by default): 
 
 ```
-./gradlew clean build
+./mvnw clean package
 ```
 
 ## Running
@@ -17,7 +17,7 @@ JDK 17 or 21 is required to build/run (in the `build.gradle` 21 is set up by def
 For an in-memory H2 database, just run the application:
 
 ```
-java -jar build/libs/spring-data-jdbc-sample-1.0.jar 
+java -jar target/spring-data-jdbc-sample-1.0.jar 
 ```
 
 ### Run with MySQL database
@@ -26,7 +26,7 @@ To run with a local MySQL, run with `localmysql` spring profile
 
 ```
 SPRING_PROFILES_ACTIVE=localmysql java -jar \
-    build/libs/spring-data-jdbc-sample-1.0.jar
+    target/spring-data-jdbc-sample-1.0.jar
 ```
 
 For the above to work, start a MySQL instance in docker like so:
@@ -62,7 +62,7 @@ To run with a local PostgresSQL, run with `localpg` spring profile
 
 ```
 SPRING_PROFILES_ACTIVE=localpg java -jar \
-    build/libs/spring-data-jdbc-sample-1.0.jar
+    target/spring-data-jdbc-sample-1.0.jar
 ```
 
 For the above to work, start a PostgresSQL instance in docker like so:
@@ -82,7 +82,7 @@ To use an Oracle DB, run with `oracle` spring profile
 
 ```
 SPRING_PROFILES_ACTIVE=oracle java -jar \
-    build/libs/spring-data-jdbc-sample-1.0.jar
+    target/spring-data-jdbc-sample-1.0.jar
 ```
 
 For the above to work, start an OracleXE instance in docker like so:
@@ -104,7 +104,8 @@ Creating a spring-boot OCI image (with a specific image name):
 Running this as is will create an OCI image with a native-image binary inside the image. If you want a regular image with the JRE included, comment out the `org.graalvm.buildtools.native` plugin from the `build.gradle`
 
 ```
-./gradlew clean bootBuildImage --imageName=maliksalman/spring-data-jdbc-sample:1.0
+./mvnw clean spring-boot:build-image \
+    -Dspring-boot.build-image.imageName='maliksalman/spring-data-jdbc-sample:1.0'
 ```
 
 Running the docker container:
@@ -116,7 +117,7 @@ docker run --rm -p 8080:8080 maliksalman/spring-data-jdbc-sample:1.0
 Compiling into native binary with GraalVM or NIK:
 
 ```
-./gradlew clean nativeCompile
+./mvnw clean -Pnative native:compile
 ```
 
-This will create a binary at `build/native/nativeCompile/spring-data-jdbc-sample`
+This will create a binary at `target/spring-data-jdbc-sample`
